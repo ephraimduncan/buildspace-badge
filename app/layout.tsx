@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import "./globals.css";
 import { Manrope } from "next/font/google";
 
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.variable}>{children}</body>
+      <Toaster />
     </html>
   );
 }

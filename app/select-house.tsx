@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import React, { useState, useCallback, useRef } from "react";
 import { BuildspaceLogo } from "./buildspace-logo";
 import { toSvg } from "html-to-image";
+import { toast } from "sonner";
 
 export function SelectHouse() {
   const [selectedHouse, setHouse] = useState<Houses>("Alterok");
@@ -29,9 +30,11 @@ export function SelectHouse() {
         link.href = dataUrl;
         link.click();
       })
+      .then(() => {
+        toast.success("Badge downloaded");
+      })
       .catch((err) => {
-        //  install sonner for error
-        console.log(err);
+        toast.error("Failed to download badge");
       });
   }, [ref]);
 
