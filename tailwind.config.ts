@@ -8,10 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: ["var(--font-manrope)"],
+      },
+      colors: {
+        "spectreseek-background": "hsl(var(--spectreseek-background))",
+        "spectreseek-foreground": "hsl(var(--spectreseek-foreground))",
+        "spectreseek-muted": "hsl(var(--spectreseek-muted))",
+
+        "alterok-background": "hsl(var(--alterok-background))",
+        "alterok-foreground": "hsl(var(--alterok-foreground))",
+        "alterok-muted": "hsl(var(--alterok-muted))",
+
+        "gaudmire-background": "hsl(var(--gaudmire-background))",
+        "gaudmire-foreground": "hsl(var(--gaudmire-foreground))",
+        "gaudmire-muted": "hsl(var(--gaudmire-muted))",
+
+        "erevald-background": "hsl(var(--erevald-background))",
+        "erevald-foreground": "hsl(var(--erevald-foreground))",
+        "erevald-muted": "hsl(var(--erevald-muted))",
       },
     },
   },
