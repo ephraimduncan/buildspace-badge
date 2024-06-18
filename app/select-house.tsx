@@ -63,13 +63,13 @@ export function SelectHouse() {
             onClick={downloadBadge}
             className={cn(
               "inline-flex items-center transition-all",
-              "border border-dashed !px-8 text-3xl !py-4 font-bold space-x-5 cursor-pointer select-none",
+              "border border-dashed !px-8 !pl-7 text-3xl !py-4 font-bold space-x-5 cursor-pointer select-none",
               "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
               {
-                "border-alterok-background text-alterok-foreground": selectedHouse === "Alterok",
-                "border-erevald-background text-erevald-foreground": selectedHouse === "Erevald",
-                "border-gaudmire-background text-gaudmire-foreground": selectedHouse === "Gaudmire",
-                "border-spectreseek-background text-spectreseek-foreground": selectedHouse === "Spectreseek",
+                "border-alterok-foreground text-alterok-foreground": selectedHouse === "Alterok",
+                "border-erevald-foreground text-erevald-foreground": selectedHouse === "Erevald",
+                "border-gaudmire-foreground text-gaudmire-foreground": selectedHouse === "Gaudmire",
+                "border-spectreseek-foreground text-spectreseek-foreground": selectedHouse === "Spectreseek",
               }
             )}
           >
