@@ -1,17 +1,17 @@
 ## [n&w-badge](https://nw-badge.vercel.app)
 
 <div>
-<img src="./assets/buildspace-badge-1.svg">
+<img src="./public/spectreseek.svg">
 </div>
 
 <div>
-<img src="./assets/buildspace-badge-4.svg">
+<img src="./public/erevald.svg">
 </div>
 
 <div>
-<img src="./assets/buildspace-badge-3.svg">
+<img src="./public/guadmire.svg">
 </div>
 
 <div>
-<img src="./assets/buildspace-badge-2.svg">
+<img src="./public/alterok.svg">
 </div>
