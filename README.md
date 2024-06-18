@@ -9,7 +9,7 @@
 </div>
 
 <div>
-<img src="./public/guadmire.svg">
+<img src="./public/gaudmire.svg">
 </div>
 
 <div>
