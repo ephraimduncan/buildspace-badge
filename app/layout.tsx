@@ -8,7 +8,7 @@ const font = Manrope({
   variable: "--font-manrope",
 });
 
-export const metatada: Metadata = {
+export const metadata: Metadata = {
   title: "n&w badge",
   description: "Select your house and download your badge",
 };
