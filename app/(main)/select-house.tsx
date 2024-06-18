@@ -1,38 +1,17 @@
 "use client";
 import { House, Houses } from "@/lib/houses";
 import { cn } from "@/lib/utils";
-import React, { useState, useCallback, useRef } from "react";
-import { BuildspaceLogo } from "./buildspace-logo";
-import { toSvg } from "html-to-image";
-import { toast } from "sonner";
+import React, { useState } from "react";
+import Image from "next/image";
 
 export function SelectHouse() {
   const [selectedHouse, setHouse] = useState<House>("alterok");
-  const ref = useRef<HTMLDivElement>(null);
 
-  const downloadBadge = useCallback(() => {
-    if (ref.current === null) {
-      return;
-    }
-
-    toSvg(ref.current, { cacheBust: true })
-      .then((dataUrl) => {
-        const link = document.createElement("a");
-
-        console.log(dataUrl);
-        console.log(link);
-
-        link.download = "buildspace-badge.svg";
-        link.href = dataUrl;
-        link.click();
-      })
-      .then(() => {
-        toast.success("Badge downloaded");
-      })
-      .catch((err) => {
-        toast.error("Failed to download badge");
-      });
-  }, [ref]);
+  const downloadBadge = () => {
+    const link = document.createElement("a");
+    link.href = `/${selectedHouse}.svg`;
+    link.click();
+  };
 
   return (
     <div className="flex flex-col items-center gap-10">
@@ -57,25 +36,15 @@ export function SelectHouse() {
       </div>
 
       <div className="flex flex-col items-center gap-2">
-        <div ref={ref}>
-          <div
-            onClick={downloadBadge}
-            className={cn(
-              "inline-flex items-center transition-all",
-              "border border-dashed !px-8 !pl-7 text-3xl !py-4 font-bold space-x-5 cursor-pointer select-none",
-              "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-              {
-                "border-alterok-foreground text-alterok-foreground": selectedHouse === "alterok",
-                "border-erevald-foreground text-erevald-foreground": selectedHouse === "erevald",
-                "border-gaudmire-foreground text-gaudmire-foreground": selectedHouse === "gaudmire",
-                "border-spectreseek-foreground text-spectreseek-foreground": selectedHouse === "spectreseek",
-              }
-            )}
-          >
-            <BuildspaceLogo size={40} />
-            <span>n&amp;w s5</span>
-          </div>
-        </div>
+        <Image
+          className="cursor-pointer"
+          onClick={downloadBadge}
+          src={`/${selectedHouse}.svg`}
+          width={200}
+          height={200}
+          alt={selectedHouse + " badge"}
+        />
+
         <span className="text-xs opacity-50">click to download</span>
       </div>
     </div>
