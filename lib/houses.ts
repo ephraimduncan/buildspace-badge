@@ -1,3 +1,2 @@
-export type Houses = "Spectreseek" | "Alterok" | "Gaudmire" | "Erevald";
-
-export const Houses: Houses[] = ["Alterok", "Erevald", "Gaudmire", "Spectreseek"];
+export const Houses = ["alterok", "erevald", "gaudmire", "spectreseek"] as const;
+export type House = (typeof Houses)[number];

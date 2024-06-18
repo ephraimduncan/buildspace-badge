@@ -1,5 +1,5 @@
 "use client";
-import { Houses } from "@/lib/houses";
+import { House, Houses } from "@/lib/houses";
 import { cn } from "@/lib/utils";
 import React, { useState, useCallback, useRef } from "react";
 import { BuildspaceLogo } from "./buildspace-logo";
@@ -7,7 +7,7 @@ import { toSvg } from "html-to-image";
 import { toast } from "sonner";
 
 export function SelectHouse() {
-  const [selectedHouse, setHouse] = useState<Houses>("Alterok");
+  const [selectedHouse, setHouse] = useState<House>("alterok");
   const ref = useRef<HTMLDivElement>(null);
 
   const downloadBadge = useCallback(() => {
@@ -42,10 +42,10 @@ export function SelectHouse() {
             <div
               onClick={() => setHouse(house)}
               className={cn("text-lg cursor-pointer", {
-                "text-alterok-foreground": house === "Alterok",
-                "text-erevald-foreground": house === "Erevald",
-                "text-gaudmire-foreground": house === "Gaudmire",
-                "text-spectreseek-foreground": house === "Spectreseek",
+                "text-alterok-foreground": house === "alterok",
+                "text-erevald-foreground": house === "erevald",
+                "text-gaudmire-foreground": house === "gaudmire",
+                "text-spectreseek-foreground": house === "spectreseek",
                 "underline underline-offset-8": house === selectedHouse,
               })}
               key={house + index}
@@ -65,10 +65,10 @@ export function SelectHouse() {
               "border border-dashed !px-8 !pl-7 text-3xl !py-4 font-bold space-x-5 cursor-pointer select-none",
               "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
               {
-                "border-alterok-foreground text-alterok-foreground": selectedHouse === "Alterok",
-                "border-erevald-foreground text-erevald-foreground": selectedHouse === "Erevald",
-                "border-gaudmire-foreground text-gaudmire-foreground": selectedHouse === "Gaudmire",
-                "border-spectreseek-foreground text-spectreseek-foreground": selectedHouse === "Spectreseek",
+                "border-alterok-foreground text-alterok-foreground": selectedHouse === "alterok",
+                "border-erevald-foreground text-erevald-foreground": selectedHouse === "erevald",
+                "border-gaudmire-foreground text-gaudmire-foreground": selectedHouse === "gaudmire",
+                "border-spectreseek-foreground text-spectreseek-foreground": selectedHouse === "spectreseek",
               }
             )}
           >

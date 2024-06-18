@@ -11,7 +11,7 @@ const font = Manrope({
 
 export const metadata: Metadata = {
   title: "n&w badge",
-  description: "Select your house and download your badge",
+  description: "select your house and download your badge",
 };
 
 export default function RootLayout({
