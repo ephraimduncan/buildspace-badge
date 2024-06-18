@@ -11,10 +11,6 @@ export function SelectHouse() {
   const ref = useRef<HTMLDivElement>(null);
 
   const downloadBadge = useCallback(() => {
-    console.log("downloaddd......");
-
-    console.log(ref.current);
-
     if (ref.current === null) {
       return;
     }

@@ -1,5 +1,5 @@
-import { BuildspaceLogo } from "./buildspace-logo";
-import { SelectHouse } from "./select-house";
+import { BuildspaceLogo } from "./(main)/buildspace-logo";
+import { SelectHouse } from "./(main)/select-house";
 
 export default function Home() {
   return (
